@@ -34,7 +34,7 @@
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="185dp"
-        android:layout_height="38dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Ingrese su Nombre"
         android:inputType="textPersonName"
@@ -157,7 +157,7 @@
     <Switch
         android:id="@+id/switch2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Opcion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,14 +180,15 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="122dp"
-        android:layout_height="75dp"
+        android:layout_width="116dp"
+        android:layout_height="86dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnIngresar"
+        android:contentDescription="hhhhh"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.878"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.673"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@android:drawable/btn_star_big_on"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
