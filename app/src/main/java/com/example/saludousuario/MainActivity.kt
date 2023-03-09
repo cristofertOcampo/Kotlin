@@ -1,69 +1,93 @@
 package com.example.saludousuario
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.RadioButton
-import android.widget.Toast
+import android.widget.*
 
 
 class MainActivity : AppCompatActivity() {
-    var radio1:RadioButton?=null
-    var radio2:RadioButton?=null
-    var check1:CheckBox?=null
-    var check2:CheckBox?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val boton:Button = findViewById(R.id.btnIngresar)
-        boton.setOnClickListener {ingresarNombre()}
+        boton.setOnClickListener {onClick(1)}
+
+        val btnPromedio:Button = findViewById(R.id.btnPromedioNotas)
+        btnPromedio.setOnClickListener{onClick(2)}
     }
-        private fun ingresarNombre() {
-            val campoNombre:EditText = findViewById(R.id.txtNombre)
-            var nombre = campoNombre.text
 
+        private fun onClick(boton: Int) {
+            when(boton){
+                1->{
+                    //Nombre
+                    val fieldTxt:EditText= findViewById(R.id.txtNombre)
+                    val name:String=fieldTxt.text.toString()
 
-            //RadioButtons
+                    //Radio
+                    val radioOne:RadioButton =findViewById(R.id.radioButton)
+                    val radioTwo:RadioButton =findViewById(R.id.radioButton2)
+                    var radioResult: String = ""
 
-            radio1=findViewById(R.id.radioButton)
-            radio2=findViewById(R.id.radioButton2)
+                    if(radioOne.isChecked){
+                        radioResult += "opcion 1 seleccionada "
+                    }else{
+                        radioResult += "opcion 1 no seleccionada"
+                    }
 
-            var radioResult: String = ""
+                    if(radioTwo.isChecked) {
+                        radioResult += "opcion 2 seleccionada "
+                    }else{
+                        radioResult += "opcion 2 no seleccionada"
+                    }
 
-            if (radio1?.isChecked==true){
-                radioResult += "opcion1\n"
-            }else{
-                radioResult += "error"
+                    //CheckBox
+                    val checkOne:CheckBox =findViewById(R.id.checkBox2)
+                    val checkTwo:CheckBox =findViewById(R.id.checkBox3)
+                    var checkResult: String = ""
+
+                    if (checkOne.isChecked){
+                        checkResult += "Check 1 activo "
+                    }else{
+                        checkResult += "Check 1 inactivo "
+                    }
+                    if (checkTwo.isChecked) {
+                        checkResult += "Check 2 activo "
+                    }else{
+                        checkResult += "Check 2 inactivo "
+                    }
+
+                    //Toggle
+                    val toggleBtn:ToggleButton = findViewById(R.id.toggleButton)
+                    var statusToggle:String = ""
+
+                    if (toggleBtn.isChecked) {
+                        statusToggle += "Toogle activo"
+                    } else {
+                        statusToggle += "Toogle inactivo"
+                    }
+
+                    //Switch
+                    val switchBtn:Switch = findViewById(R.id.switch2)
+                    var statusSwitch:String = ""
+                    if(switchBtn.isChecked) {
+                        statusSwitch += "Switch activo"
+                    } else {
+                        statusSwitch += "Switch inactivo"
+                    }
+
+                    val message = "$name, $radioResult, $checkResult, $statusToggle, $statusSwitch"
+                    Toast.makeText(this, message , Toast.LENGTH_LONG).show()
+                }
+                2->{
+                    //Creamos el intent encargado de la comunicacion entre actividades
+                    val intent = Intent(this,PromedioNotas::class.java)
+                    startActivity(intent)
+                }
             }
-
-            if(radio2?.isChecked==true) {
-                radioResult += "opcion2"
-            }else{
-                radioResult += "error"
-            }
-
-            //CheckBox
-            check1=findViewById(R.id.checkBox2)
-            check2=findViewById(R.id.checkBox3)
-
-            var checkResult: String = ""
-
-            if ( check1?.isChecked==true){
-                checkResult += "Check 1"
-            }else{
-                checkResult += "error"
-            }
-            if (check1?.isChecked==true) {
-                checkResult += "Check 2"
-            }else{
-                checkResult += "error"
-            }
-
-            Toast.makeText(this, "Bienvenid@ $nombre $radioResult $check1", Toast.LENGTH_LONG).show()
-            radioResult += ""
-            checkResult += ""
         }
 }
+
+
+
