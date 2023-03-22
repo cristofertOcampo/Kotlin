@@ -29,10 +29,10 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txtNombre"
-        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
+        app:layout_constraintVertical_bias="0.127" />
 
     <EditText
         android:id="@+id/txtNombre"
@@ -53,16 +53,17 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
         android:text="Materia"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintEnd_toStartOf="@+id/txtMateria"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtMateria"
         android:layout_width="174dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -77,9 +78,9 @@
         app:layout_constraintVertical_bias="0.215" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
-        android:layout_width="56dp"
-        android:layout_height="34dp"
+        android:id="@+id/txtDecimalNota1"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,27 +91,28 @@
         app:layout_constraintVertical_bias="0.394" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal2"
+        android:id="@+id/txtDecimalNota2"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="76dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtDecimalNota3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtDecimalNota1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <EditText
+        android:id="@+id/txtDecimalNota3"
         android:layout_width="44dp"
         android:layout_height="36dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextNumberDecimal3"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.395" />
-
-    <EditText
-        android:id="@+id/editTextNumberDecimal3"
-        android:layout_width="55dp"
-        android:layout_height="37dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.758"
+        app:layout_constraintHorizontal_bias="0.792"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12"
         app:layout_constraintVertical_bias="0.036" />
@@ -120,7 +122,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nota 1"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/txtDecimalNota1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nota 2"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimal2"
+        app:layout_constraintBottom_toTopOf="@+id/txtDecimalNota2"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toEndOf="@+id/textView10"
@@ -162,5 +164,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
+    <Button
+        android:id="@+id/buttonCalcular"
+        android:layout_width="222dp"
+        android:layout_height="52dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/btnClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.903" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
