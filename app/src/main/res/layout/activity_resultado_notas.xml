@@ -7,7 +7,7 @@
     tools:context=".ResultadoNotas">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/txtViewNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.116" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/txtViewResultadoNotas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:text="El estudiante:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView26"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewResultadoNotas"
         app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,13 +48,13 @@
         android:layout_height="wrap_content"
         android:text="El promedio es:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView24"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewPromedio"
         app:layout_constraintHorizontal_bias="0.247"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txtViewPromedio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -71,14 +71,14 @@
         android:layout_height="wrap_content"
         android:text="El estudiante con el nombre:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewNombre"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.116" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/txtViewNota3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -95,14 +95,14 @@
         android:layout_height="wrap_content"
         android:text="Nota 3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView22"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewNota3"
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.425" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/txtViewNota2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -119,14 +119,14 @@
         android:layout_height="wrap_content"
         android:text="Nota 2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView20"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewNota2"
         app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.32" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/txtViewNota1"
         android:layout_width="58dp"
         android:layout_height="19dp"
         android:layout_marginStart="129dp"
@@ -154,7 +154,7 @@
         app:layout_constraintVertical_bias="0.237" />
 
     <TextView
-        android:id="@+id/textView16"
+        android:id="@+id/txtViewMateria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -171,7 +171,7 @@
         android:layout_height="wrap_content"
         android:text="La Materia:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView16"
+        app:layout_constraintEnd_toStartOf="@+id/txtViewMateria"
         app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
